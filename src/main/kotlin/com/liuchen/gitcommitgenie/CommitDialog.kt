@@ -19,5 +19,15 @@ class CommitDialog internal constructor(project: Project?, commitMessage: Commit
     override fun createCenterPanel(): JComponent? {
         return panel.getMainPanel()
     }
+
+
+    fun getCommitMessage(): String {
+
+    }
+
+    override fun toString(): String {
+        return super.toString()
+    }
+
 }
 

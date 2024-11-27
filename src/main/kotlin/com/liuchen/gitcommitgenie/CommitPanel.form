@@ -225,7 +225,7 @@
               <text value="Type of change"/>
             </properties>
           </component>
-          <component id="5a83d" class="javax.swing.JButton" binding="aigc">
+          <component id="5a83d" class="javax.swing.JButton" binding="aigcButton">
             <constraints>
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -237,4 +237,19 @@
       </grid>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="changeTypeGroup">
+      <member id="ee13e"/>
+      <member id="f885f"/>
+      <member id="f9166"/>
+      <member id="7c12e"/>
+      <member id="ae2a8"/>
+      <member id="b32d8"/>
+      <member id="6cff6"/>
+      <member id="b2e9d"/>
+      <member id="6094d"/>
+      <member id="2921e"/>
+      <member id="8b9a2"/>
+    </group>
+  </buttonGroups>
 </form>

@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e429df40-dcfc-4bca-8e49-7cbece41520f" name="Changes" comment="feat: add ui">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitPanel.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CreateCommitAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/load.png" afterDir="false" />
+    <list default="true" id="e429df40-dcfc-4bca-8e49-7cbece41520f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/command/GitBaseQuery.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/command/GitBranchNameQuery.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/command/GitDiffQuery.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/command/GitLogQuery.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CreateCommitAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CreateCommitAction.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +42,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="liuchen &lt;chen.liu386@gmail.com&gt;" />
         <option value="chen.liu386@gmail.com" />
       </list>
     </option>
@@ -57,6 +59,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2022.2.5/35d748abc651d2934dc2925e3fc4ff1c12255d5a/ideaIC-2022.2.5-sources.jar!/com/intellij/openapi/actionSystem/AnActionEvent.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2022.2.5/35d748abc651d2934dc2925e3fc4ff1c12255d5a/ideaIC-2022.2.5-sources.jar!/com/intellij/openapi/ui/DialogWrapper.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2022.2.5/35d748abc651d2934dc2925e3fc4ff1c12255d5a/ideaIC-2022.2.5-sources.jar!/com/intellij/openapi/vcs/CommitMessageI.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -94,6 +97,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.liuchen.gitcommitgenie.command" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,8 +110,17 @@
       <option name="presentableId" value="Default" />
       <updated>1732677279502</updated>
       <workItem from="1732677280497" duration="51000" />
-      <workItem from="1732677337557" duration="4980000" />
+      <workItem from="1732677337557" duration="8073000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: add ui">
+      <option name="closed" value="true" />
+      <created>1732708262780</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732708262780</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,5 +131,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="feat: add ui" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: add ui" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
