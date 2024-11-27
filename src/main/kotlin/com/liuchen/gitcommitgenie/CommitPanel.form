@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.liuchen.gitcommitgenie.CommitPanel">
+  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="899" height="558"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="5cab7" binding="mainPanel" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <maximumSize width="900" height="2147483647"/>
+          <preferredSize width="900" height="598"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="8f70b" layout-manager="GridLayoutManager" row-count="11" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="ee13e" class="javax.swing.JRadioButton" binding="featRadioButton">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="feat"/>
+                  <selected value="true"/>
+                  <text value="feat - A new feature"/>
+                </properties>
+              </component>
+              <hspacer id="3e249">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="27" height="11"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <component id="f885f" class="javax.swing.JRadioButton" binding="fixRadioButton">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="fix"/>
+                  <selected value="false"/>
+                  <text value="fix - A bug fix"/>
+                </properties>
+              </component>
+              <component id="f9166" class="javax.swing.JRadioButton" binding="docsRadioButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="docs"/>
+                  <text value="docs - Documentation only changes"/>
+                </properties>
+              </component>
+              <component id="7c12e" class="javax.swing.JRadioButton" binding="styleRadioButton">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="style"/>
+                  <text value="style - Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)"/>
+                </properties>
+              </component>
+              <component id="ae2a8" class="javax.swing.JRadioButton" binding="refactorRadioButton">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="refactor"/>
+                  <text value="refactor - A code change that neither fixes a bug nor adds a feature"/>
+                </properties>
+              </component>
+              <component id="b32d8" class="javax.swing.JRadioButton" binding="perfRadioButton">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="perf"/>
+                  <selected value="false"/>
+                  <text value="perf - A code change that improves performance"/>
+                </properties>
+              </component>
+              <component id="6cff6" class="javax.swing.JRadioButton" binding="testRadioButton">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="test"/>
+                  <text value="test - Adding missing tests or correcting existing tests"/>
+                </properties>
+              </component>
+              <component id="b2e9d" class="javax.swing.JRadioButton" binding="buildRadioButton">
+                <constraints>
+                  <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="build"/>
+                  <text value="build - Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)"/>
+                </properties>
+              </component>
+              <component id="6094d" class="javax.swing.JRadioButton" binding="ciRadioButton">
+                <constraints>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="ci"/>
+                  <text value="ci - Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)"/>
+                </properties>
+              </component>
+              <component id="2921e" class="javax.swing.JRadioButton" binding="choreRadioButton">
+                <constraints>
+                  <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="chore"/>
+                  <text value="chore - Other changes that don't modify src or test files"/>
+                </properties>
+              </component>
+              <component id="8b9a2" class="javax.swing.JRadioButton" binding="revertRadioButton">
+                <constraints>
+                  <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="581" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <actionCommand value="revert"/>
+                  <text value="revert - Reverts a previous commit"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <component id="ccc16" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="139" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Scope of this change"/>
+            </properties>
+          </component>
+          <component id="2861b" class="javax.swing.JComboBox" binding="changeScope">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <editable value="true"/>
+            </properties>
+          </component>
+          <component id="35db0" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <horizontalTextPosition value="2"/>
+              <text value="Short description"/>
+            </properties>
+          </component>
+          <component id="1cb53" class="javax.swing.JTextField" binding="shortDescription">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="2361" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Long description"/>
+            </properties>
+          </component>
+          <component id="8ea9f" class="javax.swing.JTextArea" binding="longDescription">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="100"/>
+              </grid>
+            </constraints>
+            <properties>
+              <lineWrap value="true"/>
+            </properties>
+          </component>
+          <component id="85a7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <horizontalTextPosition value="2"/>
+              <text value="Type of change"/>
+            </properties>
+          </component>
+          <component id="5a83d" class="javax.swing.JButton" binding="aigc">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="AIGC"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

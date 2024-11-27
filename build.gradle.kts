@@ -45,3 +45,11 @@ tasks {
     token.set(System.getenv("PUBLISH_TOKEN"))
   }
 }
+
+sourceSets {
+  main {
+    java {
+      setSrcDirs(listOf("src/main/java", "src/main/kotlin"))
+    }
+  }
+}
