@@ -12,6 +12,8 @@ import com.intellij.openapi.vcs.ui.Refreshable
 class CreateCommitAction : AnAction(), DumbAware {
     override fun actionPerformed(e: AnActionEvent) {
         val commitPanel: CommitMessageI = getCommitPanel(e) ?: return
+        println("commitPanel:")
+        println(commitPanel.toString())
         val dialog = CommitDialog(e.project, commitPanel)
         dialog.show()
 

@@ -238,7 +238,7 @@
     </children>
   </grid>
   <buttonGroups>
-    <group name="changeTypeGroup">
+    <group name="changeTypeGroup" bound="true">
       <member id="ee13e"/>
       <member id="f885f"/>
       <member id="f9166"/>
