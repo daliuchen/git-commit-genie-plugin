@@ -1,4 +1,4 @@
-package enumation
+package com.liuchen.gitcommitgenie.enumation
 
 import java.util.*
 

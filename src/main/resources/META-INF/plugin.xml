@@ -24,7 +24,20 @@
   <!-- Extension points defined by the plugin.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
   <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable
+            parentId="tools"
+            instance="com.liuchen.gitcommitgenie.setting.CommitSettingConfigurable"
+            id="com.liuchen.gitcommitgenie.setting.CommitSettingConfigurable"
+            displayName="Git Commit Genie"/>
 
+    <applicationService
+            serviceImplementation="com.liuchen.gitcommitgenie.setting.CommitSettingState"/>
+
+    <notificationGroup
+            id="ai.commits.notification.general"
+            displayType="BALLOON"
+            key="notification.group.general.name"
+    />
   </extensions>
 
   <actions>

@@ -1,6 +1,6 @@
 package com.liuchen.gitcommitgenie
 
-import enumation.ChangeType
+import com.liuchen.gitcommitgenie.enumation.ChangeType
 import org.apache.commons.lang.StringUtils
 import org.apache.commons.lang.WordUtils
 import java.util.*

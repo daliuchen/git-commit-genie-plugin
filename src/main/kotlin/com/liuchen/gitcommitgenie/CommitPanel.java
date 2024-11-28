@@ -4,7 +4,8 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vcs.CheckinProjectPanel;
 import com.intellij.openapi.vcs.CommitMessageI;
 import com.liuchen.gitcommitgenie.command.GitLogQuery;
-import enumation.ChangeType;
+import com.liuchen.gitcommitgenie.enumation.ChangeType;
+import com.liuchen.gitcommitgenie.listener.AIGCActionListener;
 
 import javax.swing.*;
 import java.io.File;
@@ -32,11 +33,14 @@ public class CommitPanel {
     private ButtonGroup changeTypeGroup; // 变更类型
 
     private Project project; // 项目目录
+    private File workingDirectory; // 工作目录
 
 
     CommitPanel(Project project, CommitMessageI commitMessage) {
         this.project = project;
         File workingDirectory = new File(project.getBasePath());
+        this.workingDirectory = workingDirectory;
+
         var logRes = new GitLogQuery(workingDirectory).execute();
         if (!logRes.isEmpty()) {
             changeScope.addItem("");
@@ -46,6 +50,12 @@ public class CommitPanel {
         if (Objects.nonNull(message)) {
             restoreValuesFromParsedCommitMessage(message);
         }
+
+        initActions();
+    }
+
+    private void initActions() {
+        aigcButton.addActionListener(new AIGCActionListener(project, workingDirectory, this, aigcButton));
     }
 
 
