@@ -6,11 +6,12 @@ import com.intellij.ui.components.JBScrollPane
 import com.intellij.ui.components.JBTextArea
 import com.intellij.ui.components.JBTextField
 import com.intellij.util.ui.FormBuilder
+import com.liuchen.gitcommitgenie.CommitSettingConfig
 import com.liuchen.gitcommitgenie.enumation.ModelType
 import javax.swing.DefaultComboBoxModel
 import javax.swing.JPanel
 
-class CommitSettingsComponent {
+class CommitSettingComponent {
     private var settingPanel: JPanel? = null
 
     private var requestPathField: JBTextField = JBTextField()
@@ -38,7 +39,31 @@ class CommitSettingsComponent {
         modelField.setModel(DefaultComboBoxModel(ModelType.MODEL_LISTS))
     }
 
+
+    fun resetValues(config: CommitSettingConfig) {
+        requestPathField.text = config.requestPath
+        apiKeyField.text = config.apiKey
+        promptField.text = config.prompt
+        modelField.selectedItem = config.model
+    }
+
     fun getSettingPanel(): JPanel? {
         return settingPanel
+    }
+
+    fun getRequestPath(): String {
+        return requestPathField.text
+    }
+
+    fun getApiKey(): String {
+        return apiKeyField.text
+    }
+
+    fun getPrompt(): String {
+        return promptField.text
+    }
+
+    fun getModel(): String? {
+        return modelField.selectedItem as String?
     }
 }
