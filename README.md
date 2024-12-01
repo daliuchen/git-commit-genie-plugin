@@ -31,8 +31,8 @@ Simply search for Git Commit Genie in the IDE's plugin marketplace and install i
 
 2. Enter the API Key and select the AI Model you want to use.
 
-![setting](./img/setting.png)
+![setting](static/setting.png)
 
 ### Generate Commit Message
 
-![git](./img/git.gif)
+![git](static/git.gif)
