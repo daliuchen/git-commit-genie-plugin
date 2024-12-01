@@ -1,4 +1,4 @@
-package com.liuchen.gitcommitgenie
+package com.liuchen.gitcommitgenie.llm
 
 class PromptManager {
 
@@ -12,17 +12,17 @@ class PromptManager {
                # git commit规范
                   生成的内容有下列字段
                     type: 修改类型。必填。取值如下：
-                      - feat: 新功能
-                      - fix: 修复bug
-                      - docs: 文档修改
-                      - style: 代码格式修改
-                      - refactor: 代码重构
-                      - perf: 性能优化
-                      - test: 测试代码
-                      - build: 构建工具或构建过程的修改
-                      - ci: CI 配置
-                      - chore: 其他修改
-                      - revert: 撤销提交
+                      - feat - A new feature
+                      - fix - A bug fix
+                      - docs - Documentation only changes
+                      - style: style - Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+                      - refactor: refactor - A code change that neither fixes a bug nor adds a feature
+                      - perf: perf - A code change that improves performance
+                      - test: test - Adding missing tests or correcting existing tests
+                      - build: build - Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+                      - ci: ci - Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+                      - chore: chore - Other changes that don't modify src or test files
+                      - revert: revert - Reverts a previous commit
                     scope: 修改范围。选填，解释如下：
                         scope表示的是修改范围和影响的业务模块，是一个名词，不需要在这里列举所有所有修改的文件。如果不知道，不要编造。
                     short_description: 一句话描述本次提交的主要内容。必填。

@@ -1,5 +1,6 @@
 package com.liuchen.gitcommitgenie
 
+import com.liuchen.gitcommitgenie.llm.PromptManager
 import com.liuchen.gitcommitgenie.setting.CommitSettingComponent
 import com.liuchen.gitcommitgenie.setting.CommitSettingState
 
@@ -20,12 +21,16 @@ data class CommitSettingConfig(
         }
 
         fun buildFromCommitSettingState(settingState: CommitSettingState): CommitSettingConfig {
-            return CommitSettingConfig(
+            val res = CommitSettingConfig(
                     requestPath = settingState.getRequestPath(),
                     apiKey = settingState.getApiKey(),
                     prompt = settingState.getPrompt(),
                     model = settingState.getModel()
             )
+            if (res.prompt.isNullOrBlank()) {
+                res.prompt = PromptManager.DEFAULT_COMMIT_PROMPT
+            }
+            return res
         }
 
 

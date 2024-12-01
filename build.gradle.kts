@@ -53,3 +53,9 @@ sourceSets {
     }
   }
 }
+
+
+dependencies {
+  implementation("com.alibaba:dashscope-sdk-java:2.13.0")
+  implementation("com.alibaba:fastjson:2.0.28")
+}

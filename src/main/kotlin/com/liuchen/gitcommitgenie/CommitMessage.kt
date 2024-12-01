@@ -11,9 +11,14 @@ class CommitMessage(
         private var changeType: ChangeType?,
         private var changeScope: String?,
         private var shortDescription: String,
-        private var longDescription: String?
+        private var longDescription: String?,
+        private var originCommitMessage: String?
 ) {
-    constructor() : this(null, null, "", "")
+    constructor() : this(null, null, "", "", null)
+    constructor(changeType: ChangeType,
+                changeScope: String?,
+                shortDescription: String,
+                longDescription: String) : this(changeType, changeScope, shortDescription, longDescription, null)
 
     override fun toString(): String {
         val builder = StringBuilder()
@@ -53,8 +58,9 @@ class CommitMessage(
         this.shortDescription = shortDescription
     }
 
-    val isValid: Boolean
-        get() = changeType != null && StringUtils.isNotBlank(shortDescription)
+    fun isValidCommitMessage(): Boolean {
+        return changeType != null && StringUtils.isNotBlank(shortDescription)
+    }
 
     fun setChangeType(changeType: ChangeType?) {
         this.changeType = changeType
@@ -66,6 +72,20 @@ class CommitMessage(
 
     fun setLongDescription(longDescription: String) {
         this.longDescription = longDescription
+    }
+
+    fun getOriginCommitMessage(): String? {
+        return originCommitMessage
+
+    }
+
+    fun setOriginCommitMessage(originCommitMessage: String) {
+        this.originCommitMessage = originCommitMessage
+
+    }
+
+    fun isValid(): Boolean {
+        return changeType != null && StringUtils.isNotBlank(shortDescription)
     }
 
     companion object {

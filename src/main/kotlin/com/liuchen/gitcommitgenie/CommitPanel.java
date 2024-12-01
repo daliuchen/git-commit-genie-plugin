@@ -30,14 +30,17 @@ public class CommitPanel {
     private JTextArea longDescription;
     private JButton aigcButton;
 
-    private ButtonGroup changeTypeGroup; // 变更类型
+    private ButtonGroup changeTypeGroup;
 
-    private Project project; // 项目目录
-    private File workingDirectory; // 工作目录
+    private Project project;
+    private File workingDirectory;
+    private CommitMessageI commitMessage;
+
 
 
     CommitPanel(Project project, CommitMessageI commitMessage) {
         this.project = project;
+        this.commitMessage = commitMessage;
         File workingDirectory = new File(project.getBasePath());
         this.workingDirectory = workingDirectory;
 
@@ -95,14 +98,17 @@ public class CommitPanel {
         );
     }
 
+    public void setOriginalMessage(String commitMessage) {
+        this.commitMessage.setCommitMessage(commitMessage);
+    }
+
     private ChangeType getSelectedChangeType() {
         for (Enumeration<AbstractButton> buttons = changeTypeGroup.getElements(); buttons.hasMoreElements(); ) {
             AbstractButton button = buttons.nextElement();
-
             if (button.isSelected()) {
                 return ChangeType.valueOf(button.getActionCommand().toUpperCase());
             }
         }
-        return null;
+        return ChangeType.FEAT;
     }
 }

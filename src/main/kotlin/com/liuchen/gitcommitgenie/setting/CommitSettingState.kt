@@ -40,12 +40,7 @@ class CommitSettingState : PersistentStateComponent<CommitSettingState> {
     }
 
     fun getConfig(): CommitSettingConfig {
-        return CommitSettingConfig(
-                requestPath = requestPath,
-                apiKey = apiKey!!,
-                prompt = prompt!!,
-                model = model!!
-        )
+        return CommitSettingConfig.buildFromCommitSettingState(this)
     }
 
     fun getRequestPath(): String? {
@@ -67,6 +62,10 @@ class CommitSettingState : PersistentStateComponent<CommitSettingState> {
     companion object {
         fun getInstance(): CommitSettingState {
             return ApplicationManager.getApplication().getService(CommitSettingState::class.java)
+        }
+
+        fun getConfig(): CommitSettingConfig {
+            return getInstance().getConfig()
         }
     }
 }
