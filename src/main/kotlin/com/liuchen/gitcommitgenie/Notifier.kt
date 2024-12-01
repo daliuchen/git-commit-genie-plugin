@@ -3,7 +3,7 @@ import com.intellij.notification.NotificationType
 import com.intellij.openapi.project.Project
 
 object Notifier {
-    private const val GENERAL_GROUP_ID = "ai.commits.notification.general"
+    private const val GENERAL_GROUP_ID = "git.commit.genie.notification.general"
     fun notifyError(project: Project, content: String) {
         innerNotify(project, content, NotificationType.ERROR)
     }

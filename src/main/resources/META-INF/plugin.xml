@@ -34,9 +34,8 @@
             serviceImplementation="com.liuchen.gitcommitgenie.setting.CommitSettingState"/>
 
     <notificationGroup
-            id="ai.commits.notification.general"
+            id="git.commit.genie.notification.general"
             displayType="BALLOON"
-            key="notification.group.general.name"
     />
   </extensions>
 

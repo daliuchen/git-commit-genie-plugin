@@ -15,7 +15,7 @@ class CommitMessage(
         private var originCommitMessage: String?
 ) {
     constructor() : this(null, null, "", "", null)
-    constructor(changeType: ChangeType,
+    constructor(changeType: ChangeType?,
                 changeScope: String?,
                 shortDescription: String,
                 longDescription: String) : this(changeType, changeScope, shortDescription, longDescription, null)

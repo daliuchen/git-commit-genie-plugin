@@ -12,10 +12,10 @@ import com.intellij.openapi.vcs.ui.Refreshable
 class CreateCommitAction : AnAction(), DumbAware {
     override fun actionPerformed(e: AnActionEvent) {
         val commitPanel: CommitMessageI = getCommitPanel(e) ?: return
-        println("commitPanel:")
-        println(commitPanel.toString())
         val dialog = CommitDialog(e.project, commitPanel)
         dialog.show()
+
+        dialog.close(DialogWrapper.CLOSE_EXIT_CODE)
 
         if (dialog.exitCode == DialogWrapper.OK_EXIT_CODE) {
             commitPanel.setCommitMessage(dialog.getCommitMessage())

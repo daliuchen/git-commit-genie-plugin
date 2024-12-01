@@ -4,6 +4,7 @@ import Notifier
 import com.alibaba.fastjson2.JSON
 import com.alibaba.fastjson2.JSONArray
 import com.alibaba.fastjson2.JSONObject
+import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.project.Project
 import com.liuchen.gitcommitgenie.CommitMessage
 import com.liuchen.gitcommitgenie.CommitSettingConfig
@@ -13,6 +14,8 @@ import com.liuchen.gitcommitgenie.enumation.ModelType
 import com.liuchen.gitcommitgenie.llm.model.QianWenModelHandler
 import org.apache.commons.lang.StringUtils
 import java.io.File
+import java.util.*
+
 
 class CommitMessageHandler(
         private var project: Project,
@@ -20,22 +23,26 @@ class CommitMessageHandler(
         private var config: CommitSettingConfig
 ) {
     private var handlerMapping = mutableMapOf<String, AIExchangeHandler>()
+    private val logger: Logger = Logger.getInstance(CommitMessageHandler::class.java)
+
 
     init {
         handlerMapping[ModelType.QWEN_TURBO.toString()] = QianWenModelHandler()
+        handlerMapping[ModelType.QWEN_PLUS.toString()] = QianWenModelHandler()
+        handlerMapping[ModelType.QWEN_MAX.toString()] = QianWenModelHandler()
     }
 
     fun generateCommitMessage(): CommitMessage? {
         val model = config.model
         val handler = handlerMapping[model]
+        if (Objects.isNull(handler)) {
+            return null
+        }
         val input = buildInput()
         if (input.isBlank()) {
             return null
         }
-        val commitMessageStr = handler?.exchange(config, input)
-        if (commitMessageStr.isNullOrBlank()) {
-            return null
-        }
+        val commitMessageStr = handler!!.exchange(config, input)
         return transform(commitMessageStr)
     }
 

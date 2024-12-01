@@ -1,6 +1,7 @@
 package com.liuchen.gitcommitgenie;
 
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.vcs.CheckinProjectPanel;
 import com.intellij.openapi.vcs.CommitMessageI;
 import com.liuchen.gitcommitgenie.command.GitLogQuery;
@@ -35,6 +36,8 @@ public class CommitPanel {
     private Project project;
     private File workingDirectory;
     private CommitMessageI commitMessage;
+
+    private CommitDialog commitDialog;
 
 
 
@@ -85,10 +88,6 @@ public class CommitPanel {
         longDescription.setText(commitMessage.getLongDescription());
     }
 
-    public JPanel getMainPanel() {
-        return mainPanel;
-    }
-
     public CommitMessage getCommitMessage() {
         return new CommitMessage(
                 getSelectedChangeType(),
@@ -99,7 +98,11 @@ public class CommitPanel {
     }
 
     public void setOriginalMessage(String commitMessage) {
-        this.commitMessage.setCommitMessage(commitMessage);
+        // DialogWrapper.close must be called on the Event Dispatch Thread (EDT). You can use SwingUtilities.invokeLater to ensure that the code runs on the EDT.
+        SwingUtilities.invokeLater(() -> {
+            commitDialog.close(DialogWrapper.CANCEL_EXIT_CODE);
+            this.commitMessage.setCommitMessage(commitMessage);
+        });
     }
 
     private ChangeType getSelectedChangeType() {
@@ -109,6 +112,14 @@ public class CommitPanel {
                 return ChangeType.valueOf(button.getActionCommand().toUpperCase());
             }
         }
-        return ChangeType.FEAT;
+        return null;
+    }
+
+    public JPanel getMainPanel() {
+        return mainPanel;
+    }
+
+    public void setDialog(CommitDialog commitDialog) {
+        this.commitDialog = commitDialog;
     }
 }

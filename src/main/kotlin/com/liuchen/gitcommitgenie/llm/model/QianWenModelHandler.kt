@@ -14,10 +14,12 @@ class QianWenModelHandler : AIExchangeHandler {
         val gen = Generation()
         Constants.apiKey = config.apiKey!!
 
+        if (!config.requestPath.isNullOrEmpty()) {
+            Constants.baseHttpApiUrl = config.requestPath
+        }
         val messages: MutableList<Message> = ArrayList()
         val userMsg = Message.builder().role(Role.USER.value).content(input).build()
         messages.add(userMsg)
-
         val param = GenerationParam.builder().model(config.model!!).messages(messages)
                 .resultFormat(GenerationParam.ResultFormat.MESSAGE)
                 .build()

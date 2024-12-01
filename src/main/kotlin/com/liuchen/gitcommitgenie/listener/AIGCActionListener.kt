@@ -25,8 +25,7 @@ class AIGCActionListener(
             aigcButton.setEnabled(false)
             val config = CommitSettingState.getConfig()
             if (!checkConfig(config)) {
-                aigcButton.setEnabled(true)
-                return
+                return aigcButton.setEnabled(true)
             }
             CommitMessageHandler(project, workingDirectory, config).generateCommitMessage()?.let {
                 if (!it.isValidCommitMessage()) {
@@ -39,6 +38,22 @@ class AIGCActionListener(
             }
             aigcButton.setEnabled(true)
         }
+
+        private fun checkConfig(config: CommitSettingConfig): Boolean {
+            if (config.apiKey.isNullOrEmpty()) {
+                Notifier.notifyError(project, "API Key is empty, please set it in setting")
+                return false
+            }
+            if (config.prompt.isNullOrEmpty()) {
+                Notifier.notifyError(project, "Prompt is empty, please set it in setting")
+                return false
+            }
+            if (config.model.isNullOrEmpty()) {
+                Notifier.notifyError(project, "Model is empty, please set it in setting")
+                return false
+            }
+            return true
+        }
     }
 
 
@@ -47,21 +62,5 @@ class AIGCActionListener(
             return
         }
         ProgressManager.getInstance().run(WorkTask())
-    }
-
-    private fun checkConfig(config: CommitSettingConfig): Boolean {
-        if (config.apiKey.isNullOrEmpty()) {
-            Notifier.notifyError(project, "API Key is empty, please set it in setting")
-            return false
-        }
-        if (config.prompt.isNullOrEmpty()) {
-            Notifier.notifyError(project, "Prompt is empty, please set it in setting")
-            return false
-        }
-        if (config.model.isNullOrEmpty()) {
-            Notifier.notifyError(project, "Model is empty, please set it in setting")
-            return false
-        }
-        return true
     }
 }

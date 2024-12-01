@@ -13,6 +13,7 @@ class CommitDialog internal constructor(project: Project?, commitMessage: Commit
         panel = CommitPanel(project, commitMessage)
         title = "Commit"
         setOKButtonText("OK")
+        panel.setDialog(this)
         init()
     }
 
