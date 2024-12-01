@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e429df40-dcfc-4bca-8e49-7cbece41520f" name="Changes" comment="feat: complete qianwen communication">
+    <list default="true" id="e429df40-dcfc-4bca-8e49-7cbece41520f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/git.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/setting.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitDialog.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitMessage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitMessage.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CommitPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CreateCommitAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/CreateCommitAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/Notifier.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/Notifier.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/enumation/ModelType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/enumation/ModelType.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/listener/AIGCActionListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/listener/AIGCActionListener.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/llm/CommitMessageHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/llm/CommitMessageHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/llm/model/QianWenModelHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/llm/model/QianWenModelHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/setting/CommitSettingComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/setting/CommitSettingComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +69,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -91,7 +87,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/cliu/IdeaProjects/git-commit-genie/src/main/resources",
+    "last_opened_file_path": "/Users/cliu/IdeaProjects/git-commit-genie/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,7 +99,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$/setting" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.liuchen.gitcommitgenie.llm" />
@@ -125,7 +126,7 @@
       <workItem from="1732788437905" duration="24000" />
       <workItem from="1732788522136" duration="200000" />
       <workItem from="1732789595098" duration="431000" />
-      <workItem from="1732980747290" duration="18059000" />
+      <workItem from="1732980747290" duration="19906000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add ui">
       <option name="closed" value="true" />
@@ -159,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733064258800</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: add qianwen related models">
+      <option name="closed" value="true" />
+      <created>1733067967495</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733067967495</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +191,8 @@
     <MESSAGE value="feat: add ui" />
     <MESSAGE value="feat: complete Setting data store" />
     <MESSAGE value="feat: complete qianwen communication" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: complete qianwen communication" />
+    <MESSAGE value="feat: add qianwen related models" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add qianwen related models" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
