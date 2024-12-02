@@ -22,9 +22,10 @@ class CommitSettingComponent {
 
     init {
         initUi()
+        val jbScrollPane = JBScrollPane(promptField)
         val openAiPanel = FormBuilder.createFormBuilder()
                 .addLabeledComponent(JBLabel("ApiKey *"), apiKeyField, 1, false)
-                .addLabeledComponent(JBLabel("Prompt"), JBScrollPane(promptField), 1, false)
+            .addLabeledComponent(JBLabel("Prompt"), jbScrollPane, 1, false)
                 .addLabeledComponent(JBLabel("Model *"), modelField, 1, false)
                 .addLabeledComponent(JBLabel("RequestPath"), requestPathField, 1, false)
                 .panel
@@ -38,6 +39,7 @@ class CommitSettingComponent {
 
     private fun initUi() {
         modelField.setModel(DefaultComboBoxModel(ModelType.MODEL_LISTS))
+
     }
 
 
@@ -46,6 +48,7 @@ class CommitSettingComponent {
         apiKeyField.text = config.apiKey
         promptField.text = config.prompt
         modelField.selectedItem = config.model
+        promptField.caretPosition = 0
     }
 
     fun getSettingPanel(): JPanel? {

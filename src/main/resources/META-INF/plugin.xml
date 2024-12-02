@@ -5,7 +5,7 @@
 
   <!-- Public plugin name should be written in Title Case.
        Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-  <name>Git-commit-genie</name>
+  <name>Git-Commit-Genie</name>
 
   <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
   <vendor email="chen.liu386@gmail.com" url="https://github.com/daliuchen">liuchen</vendor>
@@ -14,7 +14,24 @@
        Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
        Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
   <description><![CDATA[
-    Based on the Git Commit Template, <em> added AI generation. </em>
+    Based on the Git Commit Template, <em> added AI generation. </em><br><br>
+    <strong>feature</strong>
+    <ul>
+      <li>AI generation commit message</li>
+      <li>Custom AI commit message template</li>
+      <li>Support multiple LLM</li>
+    </ul>
+
+    <strong>commit message template</strong>
+    <pre><code>
+      &lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+      &lt;BLANK LINE&gt;
+      &lt;body&gt;
+      &lt;BLANK LINE&gt;
+      &lt;footer&gt;
+    </code></pre>
+
+
   ]]></description>
 
   <!-- Product and plugin compatibility requirements.
