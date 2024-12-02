@@ -1,3 +1,11 @@
+<div align="center">
+    <a href="https://plugins.jetbrains.com/plugin/21335-ai-commits">
+        <img src="./src/main/resources/META-INF/pluginIcon.svg" width="200" height="200" alt="logo"/>
+    </a>
+</div>
+<h1 align="center">Git Commit Genie</h1>
+<p align="center">AI Generate Standardized Commit Message</p>
+
 # Git Commit Genie
 
 This Git plugin offers the functionality of generating Commit Messages for JetBrains IDEs. By integrating with AI
@@ -21,7 +29,11 @@ The currently supported models are as follows:
 
 ## Installation
 
-Simply search for Git Commit Genie in the IDE's plugin marketplace and install it directly.
+<a href="https://plugins.jetbrains.com/embeddable/install/25992">
+<img src="https://user-images.githubusercontent.com/12044174/123105697-94066100-d46a-11eb-9832-338cdf4e0612.png" width="300"/>
+</a>
+
+or Simply search for Git Commit Genie in the IDE's plugin marketplace and install it directly.
 
 ## Usage
 
