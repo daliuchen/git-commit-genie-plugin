@@ -15,14 +15,21 @@
        Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
   <description><![CDATA[
     Based on the Git Commit Template, <em> added AI generation. </em><br><br>
-    <strong>feature</strong>
+    <h3>Usage</h3>
+    <ul>
+    <li>first, you need set api key, model name in setting page</li>
+      &nbsp;&nbsp; Open Settings > Tools > Git Commit Genie > set api key and model name<br>
+    <li>second, you can use it in commit dialog</li>
+      &nbsp;&nbsp; Commit Changes Dialog > click the button in the top right corner <br> > Create commit message<br>
+    </ul>
+    <h3>feature</h3>
     <ul>
       <li>AI generation commit message</li>
       <li>Custom AI commit message template</li>
       <li>Support multiple LLM</li>
     </ul>
 
-    <strong>commit message template</strong>
+    <h3>commit message template</h3>
     <pre><code>
       &lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
       &lt;BLANK LINE&gt;
@@ -30,6 +37,7 @@
       &lt;BLANK LINE&gt;
       &lt;footer&gt;
     </code></pre>
+
 
 
   ]]></description>
