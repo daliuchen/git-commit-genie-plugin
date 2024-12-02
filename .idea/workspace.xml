@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e429df40-dcfc-4bca-8e49-7cbece41520f" name="Changes" comment="docs: filled plugin.xml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/result_ENyGtacR.png.svg" afterDir="false" />
+    <list default="true" id="e429df40-dcfc-4bca-8e49-7cbece41520f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/setting/CommitSettingState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/liuchen/gitcommitgenie/setting/CommitSettingState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +119,7 @@
       <recent name="com.liuchen.gitcommitgenie.command" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Run Plugin">
+  <component name="RunManager" selected="Gradle.git-commit-genie [build]">
     <configuration name="git-commit-genie [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -164,7 +163,7 @@
       <workItem from="1732789595098" duration="431000" />
       <workItem from="1732980747290" duration="20775000" />
       <workItem from="1733104343249" duration="29000" />
-      <workItem from="1733131335766" duration="6168000" />
+      <workItem from="1733131335766" duration="7339000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add ui">
       <option name="closed" value="true" />
@@ -238,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733146159870</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: add icon">
+      <option name="closed" value="true" />
+      <created>1733149828724</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733149828724</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +271,8 @@
     <MESSAGE value="feat: add qianwen related models" />
     <MESSAGE value="docs: add READEME" />
     <MESSAGE value="docs: filled plugin.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: filled plugin.xml" />
+    <MESSAGE value="feat: add icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add icon" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
