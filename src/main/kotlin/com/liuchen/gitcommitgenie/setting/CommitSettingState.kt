@@ -7,7 +7,7 @@ import com.intellij.openapi.components.Storage
 import com.intellij.util.xmlb.XmlSerializerUtil
 import com.liuchen.gitcommitgenie.CommitSettingConfig
 
-@State(name = "org.intellij.sdk.settings.AppSettingsState", storages = [Storage("SdkSettingsPlugin.xml")])
+@State(name = "com.liuchen.gitcommitgenie.setting.CommitSettingState", storages = [Storage("GitCommitGenie.xml")])
 class CommitSettingState : PersistentStateComponent<CommitSettingState> {
 
     private var requestPath: String? = null
