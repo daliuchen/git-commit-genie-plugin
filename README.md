@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://plugins.jetbrains.com/plugin/21335-ai-commits">
+    <a href="https://plugins.jetbrains.com/plugin/25992-git-commit-genie">
         <img src="./src/main/resources/META-INF/pluginIcon.svg" width="200" height="200" alt="logo"/>
     </a>
 </div>
@@ -29,7 +29,7 @@ The currently supported models are as follows:
 
 ## Installation
 
-<a href="https://plugins.jetbrains.com/embeddable/install/25992">
+<a href="https://plugins.jetbrains.com/plugin/25992-git-commit-genie">
 <img src="https://user-images.githubusercontent.com/12044174/123105697-94066100-d46a-11eb-9832-338cdf4e0612.png" width="300"/>
 </a>
 
