@@ -26,10 +26,10 @@ import com.liuchen.gitcommitgenie.CommitSettingConfig
 @State(name = "com.liuchen.gitcommitgenie.setting.CommitSettingState", storages = [Storage("GitCommitGenie.xml")])
 class CommitSettingState : PersistentStateComponent<CommitSettingState> {
 
-    private var requestPath: String? = null
-    private var apiKey: String? = null
-    private var prompt: String? = null
-    private var model: String? = null
+    var requestPath: String? = null
+    var apiKey: String? = null
+    var prompt: String? = null
+    var model: String? = null
     override fun getState(): CommitSettingState {
         return this
     }
@@ -38,7 +38,6 @@ class CommitSettingState : PersistentStateComponent<CommitSettingState> {
     override fun loadState(state: CommitSettingState) {
         XmlSerializerUtil.copyBean(state, this)
     }
-
 
     fun isModified(config: CommitSettingConfig): Boolean {
         var modified = config.apiKey != apiKey
@@ -57,22 +56,6 @@ class CommitSettingState : PersistentStateComponent<CommitSettingState> {
 
     fun getConfig(): CommitSettingConfig {
         return CommitSettingConfig.buildFromCommitSettingState(this)
-    }
-
-    fun getRequestPath(): String? {
-        return requestPath
-    }
-
-    fun getApiKey(): String? {
-        return apiKey
-    }
-
-    fun getPrompt(): String? {
-        return prompt
-    }
-
-    fun getModel(): String? {
-        return model
     }
 
     companion object {

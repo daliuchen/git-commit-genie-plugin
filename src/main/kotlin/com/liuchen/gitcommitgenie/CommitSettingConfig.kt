@@ -38,10 +38,10 @@ data class CommitSettingConfig(
 
         fun buildFromCommitSettingState(settingState: CommitSettingState): CommitSettingConfig {
             val res = CommitSettingConfig(
-                    requestPath = settingState.getRequestPath(),
-                    apiKey = settingState.getApiKey(),
-                    prompt = settingState.getPrompt(),
-                    model = settingState.getModel()
+                requestPath = settingState.requestPath,
+                apiKey = settingState.apiKey,
+                prompt = settingState.prompt,
+                model = settingState.model
             )
             if (res.prompt.isNullOrBlank()) {
                 res.prompt = PromptManager.DEFAULT_COMMIT_PROMPT
