@@ -8,4 +8,4 @@ Initiated a new project
 
 ### Fixed
 
-- Fixthe issue where configuration data in the setting panel was lost after restarting IntelliJ IDEA.
+- Fix the issue where configuration data in the setting panel was lost after restarting IntelliJ IDEA.
